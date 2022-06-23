@@ -1,0 +1,209 @@
+:root {
+    --full-view-height-with-top-banner-on:calc(100vh - 122.86px);
+    --full-view-height-with-top-banner-off:calc(100vh - 79.99px);
+
+    --full-view-height: var(--full-view-height-with-top-banner-on);
+}
+
+.commerce-hero {
+    height: var(--full-view-height);
+    width: 100vw;
+    background: #EEE0D3;
+    position: relative;
+}
+
+.commerce-hero-link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.commerce-hero-text-container {
+    width: 488px;
+    height: 100%;
+}
+
+.commerce-hero-image {
+    width: calc(100vw - 488px);
+    height: 100%;
+}
+
+.commerce-hero-image-desktop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 100%;
+}
+
+.commerce-hero-image-mobile {
+    display: none;
+}
+
+.commerce-hero-image-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 45%;
+}
+
+.commerce-hero-text {
+    position: absolute;
+    left: 66px;
+    top: calc(50% - 119px);
+}
+
+.commerce-hero-header {
+    margin: 0;
+    padding: 0;
+    width: 310px;
+    font-family: 'Crimson Pro', "Crimson Text", "minion-pro", "Times New Roman", serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 50px;
+    color: #A25918;
+}
+
+.commerce-hero-subhead {
+    margin: 1em 0;
+    padding: 0;
+    width: 270px;
+    font-family: 'Proxima Nova', "Lato", Lato, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #757575;
+}
+
+.commerce-hero-cta {
+    background: #A25918;
+    border-radius: 4px;
+    font-family: 'Proxima Nova', "Lato", Lato, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 224.06px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commerce-hero-cta:hover {
+    transition: 0.3s;
+    -webkit-box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.commerce-hero-overlay {
+    position: absolute;
+    height: 76.25%;
+    width: 95.7%;
+    top: 11.875%;
+    left: 0;
+    box-sizing: border-box;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.commerce-hero-arrow-container {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    left: calc( 50% - 26.5px);
+    bottom: 1em;
+  }
+
+.commerce-hero-arrow-container:hover{
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+.commerce-hero-arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .commerce-hero {
+        height: 590px;
+    }
+
+    .commerce-hero-link {
+        flex-direction: column;
+    }
+
+    .commerce-hero-text-container {
+        width: 100%;
+        height: 268px;
+    }
+
+    .commerce-hero-image {
+        width: 100%;
+        height: calc(100% - 268px);
+    }
+
+    .commerce-hero-image-desktop {
+        display: none;
+    }
+
+    .commerce-hero-image-mobile {
+        display: block;
+    }
+
+    .commerce-hero-text {
+        top: 43px;
+        left: 3em;
+    }
+
+    .commerce-hero-header {
+        font-size: 30px;
+        line-height: 30px;
+        width: 250px;
+    }
+
+    .commerce-hero-subhead {
+        font-size: 18px;
+        line-height: 20px;
+        width: 230px;
+    }
+
+    .commerce-hero-overlay {
+        width: 92.53%;
+        height: 95.75%;
+        top: 0;
+        left: 3.735%;
+        border-top: none;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+
+    .commerce-hero-arrow-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .commerce-hero-text {
+        left: 2.5em;
+    }
+}
